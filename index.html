@@ -71,7 +71,7 @@
 
         /* --- Photo Grid --- */
         #photo-sec {
-            background-color: #ffcad4;
+            background-color: var(--bg);
         }
         .heart-grid { 
             display: grid; 
@@ -263,7 +263,7 @@
                 if(pass.length === 6) {
                     if(pass === target) {
                         document.getElementById('login-page').style.display = 'none';
-                        document.getElementById('main-app').style.display = 'block';
+                       document.getElementById('main-app').style.display = 'block';
                         document.getElementById('bgm').play().catch(() => {});
                         startTimer();
                     } else {
@@ -284,7 +284,7 @@
             setInterval(() => {
                 const now = new Date();
                 let y = now.getFullYear() - start.getFullYear();
-                let m = now.getMonth() - start.getMonth();
+         0     let m = now.getMonth() - start.getMonth();
                 let d = now.getDate() - start.getDate();
                 if(d < 0) { m--; let prev = new Date(now.getFullYear(), now.getMonth(), 0); d += prev.getDate(); }
                 if(m < 0) { y--; m += 12; }
@@ -325,7 +325,7 @@
 
         function openLetter() {
             document.getElementById('env').classList.add('open');
-            document.getElementById('env-text').style.opacity = '0';
+  0         document.getElementById('env-text').style.opacity = '0';
             const msg = "Happy Birthday to you\nสุขสันต์วันเกิดนะคะที่รักของเค้า\nปีนี้ก็แก่ขึ้นอีกปีแล้ว\nขอให้เธอมีความสุขมากๆนะคะ\nอย่าหักโหมงานเยอะ\nรักตัวเองให้มากๆ\n\nเค้ารักเธอนะ❤️";
             let i = 0;
             if(document.getElementById('typewriter').innerHTML === "") {
